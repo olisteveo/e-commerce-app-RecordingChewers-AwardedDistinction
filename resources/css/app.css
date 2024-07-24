@@ -1,0 +1,6 @@
+@import 'nav.scss';
+@import 'form.scss';
+@import 'artist.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

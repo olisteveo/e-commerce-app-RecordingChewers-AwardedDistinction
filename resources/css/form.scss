@@ -1,0 +1,85 @@
+
+$primary-color: #4285f4;
+$secondary-color: #34a853;
+$font-family: Arial, sans-serif;
+
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"], input[type="file"] {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: 50%;
+  margin-bottom: 1rem;
+
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 2px rgba($primary-color, 0.3);
+  }
+}
+
+button {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+
+  &:hover, &:focus {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:active {
+    background-color: darken($primary-color, 20%);
+  }
+}
+
+// Apply styles to specific elements
+#name {
+  font-weight: bold;
+}
+
+#song_sample {
+  margin-top: 1rem;
+}
+
+// Define styles for dark mode
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: #eee;
+    font-family: $font-family;
+  }
+
+  label, input, button {
+    color: #eee;
+  }
+
+  input {
+    background-color: #333;
+    border-color: #444;
+    color: #eee;
+
+    &::placeholder {
+      color: #bbb;
+    }
+
+    &:focus {
+      border-color: $secondary-color;
+      box-shadow: 0 0 0 2px rgba($secondary-color, 0.3);
+    }
+  }
+}
